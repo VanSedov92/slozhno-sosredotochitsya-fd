@@ -160,6 +160,7 @@
 }
 
 .advice__list {
+  min-inline-size: 355px;
   display: grid;
   gap: 20px;
 }
@@ -170,7 +171,6 @@
 }
 
 .content__title {
-  min-inline-size: 355px;
   font-family: var(--text-font-family, sans-serif);
   font-size: var(--text-size);
   font-weight: var(--font-weight-bold, 700);
@@ -182,7 +182,6 @@
 
 .content__subtitle {
   color: var(--text-subtitle-color, #000028);
-  min-inline-size: 355px;
   font-family: var(--text-font-family, sans-serif);
   font-size: var(--text-size);
   font-weight: var(--font-weight-bold, 700);
@@ -196,7 +195,6 @@
 }
 
 .content__subtitle_regular {
-  min-inline-size: 355px;
   font-weight: var(--font-weight-regular, 400);
   color: var(--text-subtitle-color, #000028);
   font-family: var(--text-font-family, sans-serif);
@@ -213,7 +211,7 @@
   line-height: var(--text-line-height);
   text-align: left;
   color: var(--text-main-color, #F1B2CE);
-  margin: 0 10px;
+  margin: 0px 10px;
 
 }
 
@@ -368,7 +366,6 @@
   .content__text {
     min-inline-size: min-content;
     margin: 0;
-    text-wrap: balance;
   }
 
   .concentration {
@@ -509,8 +506,8 @@
     grid-template-columns: repeat(3, 1fr);
   }
   
-.advice__list {
-  min-inline-size: 650px;
+  .advice__list {
+    min-inline-size: 650px;
 }
 
 .concentration__item {
