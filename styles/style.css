@@ -67,31 +67,6 @@
   pointer-events: none;
 }
 
-.theme-dark .header__rec::before {
-  content: 'rec';
-  position: absolute;
-  top: 10px;
-  right: 38px;
-  text-transform: uppercase;
-  color: var(--text-accent-color, #FF0070);
-  font-family: var(--text-font-family, sans-serif);
-  line-height: 25px;
-  font-weight: var(--font-weight-regular, 400);
-}
-
-.theme-dark .header__rec::after {
-  content: '';
-  position: absolute;
-  top: 18px;
-  right: 19px;
-  inline-size: 9px;
-  block-size: 9px;
-  border: 1px solid var(--text-accent-color, #FF0070);
-  background-color: var(--text-accent-color, #FF0070);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--text-accent-color, #FF0070);
-}
-
 .decorated-zone::before {
   content: '';
   position: absolute;
@@ -114,7 +89,7 @@
   border-inline-start: 1px solid var(--text-accent-color,#FF0070);
 }
 
-.header__title {  
+.header__title {
   font-family: var(--text-font-family, sans-serif);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: var(--font-weight-bold, 700);
@@ -232,13 +207,11 @@
 }
 
 .content__text {
-  min-inline-size: 355px;
   font-family: var(--text-font-family, sans-serif);
   font-size: var(--text-size);
   font-weight: var(--font-weight-regular, 400);
   line-height: var(--text-line-height);
   text-align: left;
-  text-wrap: balance;
   color: var(--text-main-color, #F1B2CE);
   margin: 0 10px;
 
@@ -348,16 +321,6 @@
     block-size: 1024px;
     grid-template-rows: min-content min-content min-content;
     margin: 0 auto 60px;
-  }
-
-  .header__rec::before {
-    top: 20px;
-    right: 48px;
-  }
-
-  .header__rec::after {
-    top: 28px;
-    right: 29px;
   }
 
   .header__theme-menu {
@@ -499,16 +462,6 @@
     margin: 0 auto 60px;
   }
 
-  .header__rec::before {
-    top: 20px;
-    right: 48px;
-  }
-
-  .header__rec::after {
-    top: 28px;
-    right: 29px;
-  }
-
   .header__theme-menu {
     margin: 20px auto 0;
     inline-size: 230px;
@@ -536,6 +489,10 @@
   .content {
     gap: 80px;
   }
+
+  .focus__list {
+    min-inline-size: 650px;
+  }
   
   .content__title {
     min-inline-size: min-content;
@@ -547,15 +504,15 @@
     block-size: min-content;
   }
 
-  .content__text {
-    
-  }
-
   .concentration__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
   
+.advice__list {
+  min-inline-size: 650px;
+}
+
 .concentration__item {
   grid-template-rows: 23px 1fr;
 }
