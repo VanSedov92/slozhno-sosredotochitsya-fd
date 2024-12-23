@@ -17,7 +17,8 @@
 
 .header {
   min-inline-size: 375px;
-  block-size: 668px;
+  block-size: 100vh;
+  min-block-size: 668px;
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
@@ -55,7 +56,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid #FF007066;
+  outline: 1px solid #FF007066;
   cursor: pointer;
 }
 
@@ -281,6 +282,7 @@
 
 .footer {
   position: relative;
+  block-size: 100vh;
   min-block-size: 668px;
   display: grid;
   place-items: center;
