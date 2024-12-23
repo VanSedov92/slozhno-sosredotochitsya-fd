@@ -12,11 +12,11 @@
   object-position: center;
   object-fit: cover;
   background-size: cover;
-  text-wrap: balance;
+  
 }
 
 .header {
-  inline-size: 375px;
+  min-inline-size: 375px;
   block-size: 668px;
   position: relative;
   display: grid;
@@ -55,19 +55,19 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--text-accent-color,#FF0070);
+  border: 1px solid #FF007066;
   cursor: pointer;
 }
 
-.header__theme-menu-button:checked {
-  outline: 1px solid var(--text-accent-color,#FF0070);
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--text-accent-color);
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
 }
 
-.header__rec::before {
+.theme-dark .header__rec::before {
   content: 'rec';
   position: absolute;
   top: 10px;
@@ -79,7 +79,7 @@
   font-weight: var(--font-weight-regular, 400);
 }
 
-.header__rec::after {
+.theme-dark .header__rec::after {
   content: '';
   position: absolute;
   top: 18px;
@@ -238,6 +238,7 @@
   font-weight: var(--font-weight-regular, 400);
   line-height: var(--text-line-height);
   text-align: left;
+  text-wrap: balance;
   color: var(--text-main-color, #F1B2CE);
   margin: 0 10px;
 
@@ -310,10 +311,11 @@
 .footer {
   position: relative;
   min-block-size: 668px;
+  display: grid;
+  place-items: center;
 }
 
 .footer__title_shadow {
-  margin: 285px auto;
   inline-size: min-content;
   text-shadow: 2px 2px var(--title-shadow-color, #FF0070);
   font-family: var(--text-font-family, sans-serif);
@@ -391,7 +393,7 @@
   
   .content__title {
     min-inline-size: min-content;
-    max-inline-size: min-content;
+    max-inline-size: 236px;
     margin: 0;
   }
 
@@ -403,6 +405,7 @@
   .content__text {
     min-inline-size: min-content;
     margin: 0;
+    text-wrap: balance;
   }
 
   .concentration {
@@ -478,16 +481,14 @@
   }
 
   .footer {
-    min-height: 1024px;
-    display: grid;
-    place-items: center;
+    min-block-size: 1024px;
+
   }
 }
 
 @media (width >= 1024px) {
   .page {
-    block-size: 100%;
-    min-block-size: 100vh;
+    inline-size: 1024px;
   }
 
   .header {
@@ -546,6 +547,10 @@
     block-size: min-content;
   }
 
+  .content__text {
+    
+  }
+
   .concentration__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -582,8 +587,6 @@
 
   .footer {
     min-block-size: 768px;
-    display: grid;
-    place-items: center;
   }
 
   .footer__title_shadow {

@@ -1,4 +1,3 @@
-
 :root.theme-light {
   --bg-color: #FFC2E6;
   --header-bg-image: url(../images/cover-image-light.png);
@@ -10,16 +9,29 @@
   --text-main-color: #353430;
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-}
-
-
-
 .theme-light .header__rec::before {
   display: none;
 }
 
 .theme-light .header__rec::after {
   display: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid #32312D66;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #FFC2E6;
+    --header-bg-image: url(../images/cover-image-light.png);
+    --header-title-color: #FFC2E6;
+    --title-shadow-color: #FF8DCB;
+    --text-subtitle-color: #353430;
+    --text-accent-color: #353430;
+    --accent-bg-color: #FF8DCB;
+    --text-main-color: #353430;
+  }
+  
 }

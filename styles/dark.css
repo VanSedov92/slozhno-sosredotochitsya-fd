@@ -18,7 +18,6 @@
     --text-main-color: #F1B2CE;
   }
 
-
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+@media (width >= 375px) {
+ 
 }
