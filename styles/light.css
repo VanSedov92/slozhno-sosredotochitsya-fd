@@ -37,5 +37,13 @@
    .accent__link {
     text-shadow: 2px 2px #FF8DCB;
  }
+
+ .header__rec::before {
+  display: none;
+ }
+
+ .header__rec::after {
+  display: none;
+ }
   
 }

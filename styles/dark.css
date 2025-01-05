@@ -17,42 +17,9 @@
     --accent-bg-color: #FF0070;
     --text-main-color: #F1B2CE;
   }
-
-@media (width >= 375px) {
-  .theme-dark .header__rec::before {
-    content: 'rec';
-    position: absolute;
-    top: 10px;
-    right: 38px;
-    text-transform: uppercase;
-    color: var(--text-accent-color, #FF0070);
-    font-family: var(--text-font-family, sans-serif);
-    line-height: 25px;
-    font-weight: var(--font-weight-regular, 400);
-  }
   
-  .theme-dark .header__rec::after {
-    content: '';
-    position: absolute;
-    top: 18px;
-    right: 19px;
-    inline-size: 9px;
-    block-size: 9px;
-    border: 1px solid var(--text-accent-color, #FF0070);
-    background-color: var(--text-accent-color, #FF0070);
-    border-radius: 50%;
-    box-shadow: 0 0 4px 2px var(--text-accent-color, #FF0070);
-  }
-}
 
-@media (width >= 768px) {
-  .theme-dark .header__rec::before {
-    top: 20px;
-    right: 48px;
-  }
 
-  .theme-dark .header__rec::after {
-    top: 28px;
-    right: 29px;
-  }
-}
+
+  
+
