@@ -382,6 +382,7 @@
     min-inline-size: min-content;
     max-inline-size: 236px;
     margin: 0;
+    padding-right: 0;
   }
 
   .content__subtitle {
@@ -499,7 +500,8 @@
   }
 
   .content__section {
-    max-inline-size: 984px;
+    min-inline-size: 984px;
+    gap: 20px 10px;
   }
 
   .content__list-concentration {
@@ -512,7 +514,7 @@
   }
   
   .content__title {
-    max-inline-size: 315px;
+    min-inline-size: 315px;
   }
 
   .content__subtitle {
