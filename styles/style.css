@@ -299,7 +299,7 @@
 
 @media (width >= 768px) {
   .page {
-    min-inline-size: min-content;
+    min-inline-size: 768px;
   }
 
   .decorated-zone::before {
@@ -352,14 +352,13 @@
 
   .content {
     gap: 80px;
-    margin-inline-start: 20px;
-    margin-inline-end: 20px;
     min-inline-size: 768px;
   }
 
   .content__section {
     min-inline-size: 728px;
     grid-template-columns: 1fr 2fr;
+    margin: 0 20px;
   }
 
   .content__section-concentration {
@@ -468,8 +467,6 @@
     display: grid;
     min-inline-size: 1024px;
     block-size: 768px;
-    grid-template-rows: min-content min-content min-content;
-    margin-block-end: 60px;
   }
 
   .header__theme-menu {
