@@ -30,7 +30,6 @@
 
 .header__theme-menu-list {
   inline-size: 70px;
-  min-block-size: 98px;
   display: grid;
   gap: 10px;
 }
@@ -478,7 +477,7 @@
   .header {
     display: grid;
     min-inline-size: 1024px;
-    block-size: 768px;
+    min-block-size: 768px;
     block-size: 100vh;
   }
 
