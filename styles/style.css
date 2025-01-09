@@ -222,7 +222,7 @@
 }
 
 .accent__link {
-  text-shadow: 2px 2px #FF0070;
+  text-shadow: 2px 2px var(--link-accent-color, #FF0070);
   text-decoration: none;
 }
 
@@ -479,12 +479,12 @@
     display: grid;
     min-inline-size: 1024px;
     block-size: 768px;
+    block-size: 100vh;
   }
 
   .header__theme-menu {
     margin: 15px auto 0;
     inline-size: 230px;
-    block-size: 26px;
   }
 
   .header__theme-menu-list {
@@ -519,7 +519,7 @@
   }
 
   .content__item {
-    grid-template-rows: 23px 1fr;
+    grid-template-rows: min-content 1fr;
   }
   
   .content__title {

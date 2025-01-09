@@ -5,6 +5,7 @@
   --title-shadow-color: #FF8DCB;
   --text-subtitle-color: #353430;
   --text-accent-color: #353430;
+  --link-accent-color: #FF8DCB;
   --accent-bg-color: #FF8DCB;
   --text-main-color: #353430;
 }
@@ -26,7 +27,7 @@
 }
 
 .theme-light .accent__link {
-  text-shadow: 2px 2px #FF8DCB;
+  text-shadow: 2px 2px var(--link-accent-color, #FF8DCB);
 }
 
 .theme-light .accent__link:hover {
