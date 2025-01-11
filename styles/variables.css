@@ -2,8 +2,6 @@
   --header-bg-image: url(../images/cover-image-dark.png);
   --header-title-size: 116px;
   --header-title-line-height: 96px;
-  --header-title-color: #DB00FF;
-  --title-shadow-color: #FF0070;
   --header-button-line-height: 18px;
   --bg-color: #000028;
   --text-size: 18px;
@@ -11,9 +9,13 @@
   --font-weight-bold: 700;
   --font-weight-regular: 400;
   --text-line-height: 23.4px;
-  --text-subtitle-color: #000028;
-  --text-accent-color: #FF0070;
-  --link-accent-color: #FF0070;
-  --accent-bg-color: #FF0070;
+  --subtitle-color: #000028;
   --text-main-color: #F1B2CE;
+  --title-color: #DB00FF;
+  --shadow-color: #FF0070;
+  --text-accent-color: #FF0070;
+  --accent-bg-color: #FF0070;
+  --footer-title-shadow-color: #FF0070;
+  --button-outline-color: #FF007066;
+  --header-rec-toggle: block;
 }

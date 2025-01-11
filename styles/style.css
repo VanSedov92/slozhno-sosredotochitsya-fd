@@ -15,17 +15,19 @@
 
 .header {
   min-inline-size: 375px;
-  block-size: 100vh;
   min-block-size: 668px;
+  block-size: 100vh;
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  margin-block-end: 40px;
+  margin: 0 auto 40px;
 }
 
 .header__theme-menu {
   justify-self: end;
   margin-inline-end: 10px;
+  margin-block-start: 75px;
+  block-size: min-content;
 }
 
 .header__theme-menu-list {
@@ -57,16 +59,16 @@
 }
 
 .header__theme-menu-button:disabled {
-  opacity: 50%;
+  outline: 1px solid currentColor;
 }
 
 .header__theme-menu-button:hover {
-  border-block-end: 1px solid currentColor;
+  outline: 1px solid var(--button-outline-color, #FF007066);
   cursor: pointer;
 }
 
 .header__theme-menu-button:focus-visible {
-  border: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
 }
 
 .header__theme-menu-button_active {
@@ -83,6 +85,7 @@
   font-family: var(--text-font-family, sans-serif);
   line-height: 25px;
   font-weight: var(--font-weight-regular, 400);
+  display: var(--header-rec-toggle);
 }
 
 .header__rec::after {
@@ -96,6 +99,7 @@
   background-color: var(--text-accent-color, #FF0070);
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--text-accent-color, #FF0070);
+  display: var(--header-rec-toggle);
 }
 
 .decorated-zone::before {
@@ -127,25 +131,27 @@
   line-height: var(--header-title-line-height);
   text-align: left;
   inline-size: min-content;
-  color: var(--header-title-color, #DB00FF);
-  text-shadow: 4px 4px 0 var(--title-shadow-color);
-  margin: 65px auto 55px;
+  color: var(--title-color, #DB00FF);
+  text-shadow: 4px 4px 0 var(--shadow-color, #FF0070);
+  align-self: center;
+  margin-inline-start: 10px;
 }
 
 .header__text {
   max-inline-size: 355px;
-  block-size: fit-content;
-  color: var(--text-subtitle-color, #000028);
+  color: var(--subtitle-color, #000028);
   font-family: var(--text-font-family, sans-serif);
   font-size: var(--text-size);
   font-weight: var(--font-weight-bold, 700);
   line-height: var(--text-line-height);
   text-align: left;
-  margin: 0 auto 66px;
+  align-self: center;
+  margin-inline-start: 10px;
+  margin-block-end: 10px;
 } 
 
 .title-decor {
-  color: var(--text-subtitle-color, #000028);
+  color: var(--subtitle-color, #000028);
   background-color: var(--accent-bg-color, #FF0070);
 }
 
@@ -185,7 +191,7 @@
 }
 
 .content__subtitle {
-  color: var(--text-subtitle-color, #000028);
+  color: var(--subtitle-color, #000028);
   font-family: var(--text-font-family, sans-serif);
   font-size: var(--text-size);
   font-weight: var(--font-weight-bold, 700);
@@ -196,7 +202,7 @@
 
 .content__subtitle_regular {
   font-weight: var(--font-weight-regular, 400);
-  color: var(--text-subtitle-color, #000028);
+  color: var(--subtitle-color, #000028);
   font-family: var(--text-font-family, sans-serif);
   font-size: var(--text-size);
   line-height: var(--text-line-height);
@@ -221,12 +227,12 @@
 }
 
 .accent__link {
-  text-shadow: 2px 2px var(--link-accent-color, #FF0070);
+  text-shadow: 2px 2px var(--shadow-color, #FF0070);
   text-decoration: none;
 }
 
 .accent__link:hover {
-  border-block-end: 1px solid #F1B2CE;
+  border-block-end: 1px solid var(--text-main-color, #F1B2CE);
   cursor: pointer;
 }
 
@@ -235,7 +241,7 @@
 }
 
 .accent__link:focus-visible {
-  outline: 1px solid #F1B2CE;
+  outline: 1px solid var(--text-main-color, #F1B2CE);
 }
 
 .gallery {
@@ -265,47 +271,41 @@
 
 .gallery__sunset {
   block-size: 142px;
-  background-image: url(../images/sunset.png);
 }  
 
 .gallery__ice-cream {
   block-size: 355px;
-  background-image: url(../images/ice-cream.png);
 }
 
 .gallery__tape {
   block-size: 237px;
-  background-image: url(../images/tape.png);
 }
 
 .gallery__books {
   block-size: 355px;
-  background-image: url(../images/books.png);
 }
 
 .gallery__street {
   block-size: 237px;
-  background-image: url(../images/street.png);
 }
 
 .footer {
   min-inline-size: 375px;
   position: relative;
   block-size: 100vh;
-  min-block-size: 668px;
   display: grid;
   place-items: center;
 }
 
 .footer__title_shadow {
   inline-size: min-content;
-  text-shadow: 2px 2px var(--title-shadow-color, #FF0070);
+  text-shadow: 2px 2px var(--footer-title-shadow-color, #FF0070);
   font-family: var(--text-font-family, sans-serif);
-  font-size: var(--header-title-size);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: var(--font-weight-bold, 700);
   line-height: var(--header-title-line-height);
   text-align: center;
-  color: var(--header-title-color,#DB00FF);
+  color: var(--title-color,#DB00FF);
 }
 
 @media (width >= 768px) {
@@ -324,10 +324,9 @@
   }
 
   .header {
-    display: grid;
     min-inline-size: 768px;
-    block-size: 1024px;
-    grid-template-rows: min-content min-content min-content;
+    min-block-size: 1024px;
+    block-size: 100vh;
     margin: 0 auto 60px;
   }
 
@@ -347,18 +346,16 @@
   }
 
   .header__title {
-    align-self: center;
     min-inline-size: 577px;
-    margin-block-start: 175px;
-    margin-block-end: 164px;
     margin-inline-start: 0;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__text {
     min-inline-size: 364px;
-    margin: 0;
-    margin-inline-end: 20px;
     justify-self: end;
+    margin-inline-end: 20px;
+    margin-block-end: 16px;
   }
 
   .content {
@@ -382,7 +379,7 @@
     gap: 20px;
   }
 
-  .content__section-advice_column {
+  .content__section-advices {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -465,7 +462,13 @@
 
   .footer {
     min-inline-size: 768px;
-    min-block-size: 1024px;
+    min-block-size: 668px;
+    block-size: 100vh;
+  }
+
+  .footer__title_shadow {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: 96px;
   }
 }
 
@@ -475,10 +478,8 @@
   }
 
   .header {
-    display: grid;
     min-inline-size: 1024px;
     min-block-size: 768px;
-    block-size: 100vh;
   }
 
   .header__theme-menu {
@@ -492,15 +493,13 @@
 
   .header__title {
     min-inline-size: 759px;
-    font-size: 157px;
     line-height: 129.53px;
-    margin-block-start: 276px;
-    margin-block-end: 115px;
   }
 
   .header__text {
     min-inline-size: 491px;
     margin-inline-end: 20px;
+    margin-block-end: 25px;
   }
 
   .content {
@@ -560,7 +559,6 @@
   }
 
   .footer__title_shadow {
-    font-size: 157px;
     line-height: 157px;
   }
 }

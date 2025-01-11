@@ -1,79 +1,37 @@
 :root.theme-light {
-  --bg-color: #fff;
+  --bg-color: #FFF;
   --header-bg-image: url(../images/cover-image-light.png);
-  --header-title-color: #FFC2E6;
-  --title-shadow-color: #FF8DCB;
-  --text-subtitle-color: #353430;
+  --title-color: #FFC2E6;  
+  --shadow-color: #FF8DCB; 
+  --subtitle-color: #353430;
   --text-accent-color: #353430;
-  --link-accent-color: #FF8DCB;
   --accent-bg-color: #FF8DCB;
   --text-main-color: #353430;
-}
-
-.theme-light .header__rec::before {
-  display: none;
-}
-
-.theme-light .header__rec::after {
-  display: none;
-}
-
-.theme-light .header__theme-menu-button:hover {
-  border-block-end: 1px solid;
-}
-
-.theme-light .header__theme-menu-button:focus-visible {
-  outline: 1px solid currentColor;
-}
-
-.theme-light .accent__link {
-  text-shadow: 2px 2px var(--link-accent-color, #FF8DCB);
-}
-
-.theme-light .accent__link:hover {
-  border-block-end: 1px solid currentColor;
-  cursor: pointer;
-}
-
-.theme-light .accent__link:focus-visible {
-  outline: 1px solid currentColor;
+  --button-outline-color: #32312D66;
+  --footer-title-shadow-color: #FF0070;
+  --header-rec-toggle: none;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --bg-color: #FFF;
     --header-bg-image: url(../images/cover-image-light.png);
-    --header-title-color: #FFC2E6;
-    --title-shadow-color: #FF8DCB;
-    --text-subtitle-color: #353430;
+    --title-color: #FFC2E6;
+    --shadow-color:#FF8DCB;
+    --subtitle-color: #353430;
     --text-accent-color: #353430;
     --accent-bg-color: #FF8DCB;
     --text-main-color: #353430;
+    --button-outline-color: #32312D66;
+    --footer-title-shadow-color: #FF0070;
+    --header-rec-toggle: none;
   }
 
-  .header__theme-menu-button:focus-visible {
-    outline: 1px solid currentColor;
+  .header__rec::before {
+    display: var(--header-rec-toggle);
   }
 
-   .accent__link {
-    text-shadow: 2px 2px #FF8DCB;
- }
-
-   .accent__link:hover {
-    border-block-end: 1px solid currentColor;
-    cursor: pointer;
-}
-
-   .accent__link:focus-visible {
-    outline: 1px solid currentColor;
-}
-
-   .header__rec::before {
-    display: none;
- }
-
-   .header__rec::after {
-    display: none;
- }
-  
+  .header__rec::after {
+    display: var(--header-rec-toggle);
+  }
 }
